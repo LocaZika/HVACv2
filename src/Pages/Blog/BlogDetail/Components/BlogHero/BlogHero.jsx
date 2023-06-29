@@ -1,5 +1,5 @@
 import { Box, Container, Grid } from "@mui/material";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 export default function BlogHero({bg, title, subTitle, postedBy, postDate, commentQuantity}) {
   return (
@@ -26,11 +26,11 @@ export default function BlogHero({bg, title, subTitle, postedBy, postDate, comme
     </Box>
   )
 }
-BlogHero.propType = {
-  bg: PropType.string.isRequired,
-  title: PropType.string.isRequired,
-  subTitle: PropType.string.isRequired,
-  postBy: PropType.string.isRequired,
-  postDate: PropType.string.isRequired,
-  commentQuantity: PropType.number.isRequired,
+BlogHero.propTypes = {
+  bg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+  postedBy: PropTypes.string.isRequired,
+  postDate: PropTypes.string.isRequired,
+  commentQuantity: PropTypes.number.isRequired,
 }
