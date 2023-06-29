@@ -1,0 +1,96 @@
+#root header{
+  a{
+    color: #353535;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .navbar{
+    a{
+      position: relative;
+      overflow: hidden;
+      padding: 5px 0;
+      &::after{
+        content: ' ';
+        position: absolute;
+        width: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #db2d2e;
+        height: 2px;
+        transition: width 0.3s linear;
+      }
+      &:hover{
+        &::after {
+          width: 100%;
+        }
+      }
+      &.active{
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.header__mobile{
+  & &__logo {
+    padding: 35px 0;
+  }
+  &__drawer {
+    >button {
+      min-height: 35px;
+      min-width: 35px;
+      border: 1px solid #323232;
+      border-radius: 2px;
+    }
+    &__wrapper {
+      padding: 50px 30px 30px;
+      >div{
+        margin-bottom: 30px;
+      }
+      .header__top{
+        background-color: transparent;
+        &__widget{
+          &__info{
+            li{
+              margin-bottom: 20px;
+              svg{
+                margin-right: 10px;
+              }
+            }
+          }
+          &__social{
+            li{
+              display: inline-block;
+              margin-right: 16px;
+              svg{
+                font-size: 15px;
+                color: #353553;
+              }
+            }
+          }
+          &__items{
+            >a, >button{
+              margin-right: 20px;
+            }
+          }
+        }
+        &__menu{
+          background-color: #4b4b4b;
+          color: #fff;
+          .MuiCollapse-wrapper{
+            flex-direction: column;
+          }
+          &__link{
+            a{
+              display: block;
+              padding: 5px 10px;
+              margin: 2px 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

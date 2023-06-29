@@ -1,0 +1,9 @@
+.car-detail{
+  & &--container{
+    width: auto;
+    margin: 0 -15px;
+  }
+  & &__section{
+    padding: 0 15px;
+  }
+}

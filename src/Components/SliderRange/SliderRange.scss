@@ -1,0 +1,31 @@
+.slider-range{
+  & &__title{
+    text-transform: capitalize;
+    color: #323232;
+    margin-bottom: 12px;
+  }
+  & &__value{
+    font-size: 15px;
+    color: #323232;
+    font-weight: 700;
+    border: none;
+  }
+  & &__range{
+    color: #db2d2e;
+
+    .MuiSlider-rail {
+      background-color: rgb(45, 45, 45);
+      opacity: 0.1;
+    }
+
+    .MuiSlider-thumb {
+      width: 14px;
+      height: 14px;
+      color: #fff;
+      border: 2px solid #db2d2e;
+      &.Mui-focusVisible {
+        box-shadow: none;
+      }
+    }
+  }
+}

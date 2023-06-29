@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+ol, ul{
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6, p{
+  text-transform: capitalize;
+}
+h2{
+  font-size: 36px;
+}
+h4{
+  font-size: 24px;
+}
+p{
+  font-size: 15px;
+  color: #727171;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0 0 15px 0;
+}
+img{
+  max-width: 100%;
+}
+#root{
+  .spad{
+    padding: 100px 0;
+  }
+  .section-title{
+    margin-bottom: 75px;
+    text-align: center;
+    span{
+      font-size: 15px;
+      color: #db2d2e;
+      font-weight: 700;
+    }
+    h2{
+      color: #353535;
+      font-size: 40px;
+      font-weight: 700;
+      margin-top: 5px;
+      margin-bottom: 16px;
+    }
+    p{
+      margin-bottom: 0;
+      font-size: 17px;
+      color: #727171;
+    }
+  }
+  .set-bg{
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+  .site-btn{
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    display: inline-block;
+    padding: 15px 35px 12px 38px;
+    background: #db2d2e;
+    border: none;
+    border-radius: 2px;
+  }
+  @media only screen and (min-width: 1200px) {
+    .MuiContainer-root {
+      max-width: 1170px !important;
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    .section-title h2, .breadcrumb__text h2 {
+      font-size: 34px;
+    }
+  }
+}

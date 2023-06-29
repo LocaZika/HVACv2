@@ -1,0 +1,52 @@
+.car-detail .car-detail__tab{
+  &__tab-panel{
+    padding-top: 45px;
+    &__info{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+    &__item{
+      margin-bottom: 30px;
+      h5{
+        color: #353535;
+        font-weight: 700;
+        margin-bottom: 6px;
+        font-size: 18px;
+      }
+      li{
+        list-style: none;
+        font-size: 15px;
+        color: #707070;
+        line-height: 36px;
+        svg{
+          color: #db2d2e;
+          margin-right: 8px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  &__nav-tab{
+    background-color: #f7f7f7;
+    .MuiTabs-flexContainer{
+      flex-wrap: wrap;
+    }
+    .nav-item{
+      text-transform: capitalize;
+      font-size: 20px;
+      color: #707070;
+      font-weight: 700;
+      border: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding: 22px 0 16px;
+      flex: 1 1 25%;
+      @media only screen and (max-width: 479px) {
+        flex: 1 1 100%;
+      }
+    }
+    .MuiTabs-indicator{
+      background-color: #db2d2e;
+    }
+  }
+}

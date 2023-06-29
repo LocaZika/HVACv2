@@ -1,0 +1,46 @@
+.home .hero {
+  --white: #fff;
+  background-color: #3f3030;
+  padding: 140px 0;
+  text-transform: capitalize;
+
+  &__link {
+    margin-right: 16px;
+    font-size: 15px;
+    padding: 12px 24px;
+    color: var(--white);
+    font-weight: 700;
+    background: #db2d2e;
+    border-radius: 2px;
+    text-decoration: none;
+
+    >img {
+      position: relative;
+      top: 2px;
+      left: -3px;
+    }
+  }
+
+  &__tab {
+    margin: 0 5px 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #323232 !important;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 2px;
+    background: var(--white);
+    opacity: 1;
+
+    &-panel {
+      background-color: var(--white);
+      padding: 42px 40px 50px;
+      border-radius: 2px;
+      h2 {
+        font-weight: 700;
+        color: #323232;
+        margin-bottom: 22px;
+      }
+    }
+  }
+}

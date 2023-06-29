@@ -1,0 +1,34 @@
+#root .breadcrumb{
+  background-image: url('https://preview.colorlib.com/theme/hvac/img/breadcrumb-bg.jpg');
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  padding: 70px 0;
+  li.MuiBreadcrumbs-separator{
+    margin: 0;
+  }
+  h2{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 46px;
+    margin-bottom: 6px;
+    @media only screen and (max-width: 479px) {
+      font-size: 34px;
+    }
+  }
+  &__link{
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: capitalize;
+    & svg {
+      vertical-align: middle;
+      > path{
+        fill: #db2d2e;
+      }
+    }
+  }
+  &__path{
+    text-transform: capitalize;
+  }
+  .MuiBreadcrumbs-ol{
+    justify-content: center;
+  }
+}

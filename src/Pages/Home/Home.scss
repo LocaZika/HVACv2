@@ -1,0 +1,29 @@
+.home{
+  // variables
+  --white: #fff;
+  // style base
+  .MuiTabs-indicator{
+    background-color: var(--white);
+    height: 10px;
+    transition: left 0s linear;
+  }
+  .section-title{
+    margin-bottom: 45px;
+    text-transform: capitalize;
+    span{
+      font-size: 15px;
+      color: #db2d2e;
+      font-weight: 700;
+    }
+    h2{
+      color: #353535;
+      font-size: 40px;
+      font-weight: 700;
+      margin-top: 5px;
+      margin-bottom: 16px;
+    }
+    p{
+      text-transform: none;
+    }
+  }
+}

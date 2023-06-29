@@ -1,0 +1,64 @@
+.contact{
+  &__form{
+    &-textarea{
+      resize: none;
+      height: 100px !important;
+      width: 100% !important;
+      padding: 16.5px 14px;
+      border: 1px solid rgba(0, 0, 0, 0.23);
+      border-radius: 4px;
+    }
+    &-textfield{
+      width: 100%;
+    }
+    &-schedule{
+      &-title{
+        text-align: left;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+        h2{
+          color: #353535;
+          font-size: 40px;
+          font-weight: 700;
+          margin: 5px 0 16px 0;
+        }
+        p{
+          font-size: 17px;
+        }
+      }
+      ul li{
+        font-size: 15px;
+        color: #353535;
+        line-height: 36px;
+        list-style: none;
+        span{
+          text-transform: capitalize;
+          color: #727171;
+          width: 85px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &__address{
+    &-item{
+      margin-bottom: 30px;
+      text-transform: capitalize;
+      h4{
+        color: #353535;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+      p{
+        line-height: 32px;
+        margin-bottom: 5px;
+      }
+      span{
+        display: block;
+        font-size: 18px;
+        color: #353535;
+        font-weight: 700;
+      }
+    }
+  }
+}

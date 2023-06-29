@@ -1,0 +1,27 @@
+#root .team{
+  &-title{
+    margin-bottom: 50px;
+  }
+  &__item{
+    margin-bottom: 30px;
+    img{
+      border-radius: 2px;
+      min-width: 100%;
+    }
+    &__text{
+      padding-top: 20px;
+      text-align: center;
+      h5{
+        font-size: 20px;
+        color: #353535;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      span{
+        font-size: 15px;
+        color: #727171;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

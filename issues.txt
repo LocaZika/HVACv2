@@ -1,0 +1,1 @@
+xoa phan xu ly backend BlogCard

@@ -1,0 +1,9 @@
+.testimonial{
+  .carousel li.dot{
+    box-shadow: none;
+    background-color: #ebebeb;
+    &.selected{
+      background-color: #db2d2e;
+    }
+  }
+}

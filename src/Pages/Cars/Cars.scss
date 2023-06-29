@@ -1,0 +1,55 @@
+.cars{
+  padding-bottom: 120px;
+  h5{
+    font-size: 20px;
+    color: #353535;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  & &__sidebar{
+    background-color: #f7f7f7;
+    padding: 30px;
+    text-transform: capitalize;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 40px;
+    }
+    &__search{
+      margin-bottom: 40px;
+    }
+  }
+  & &-sort{
+    margin-bottom: 30px;
+    padding: 12px 30px;
+    background-color: #f7f7f7;
+    &__option{
+      h6{
+        font-size: 15px;
+        color: #353535;
+        font-weight: 700;
+        margin-right: 15px;
+        display: inline-block;
+      }
+      .MuiSelect-outlined{
+        padding: 0 50px 0 20px;
+        background-color: #fff;
+        line-height: 36px;
+        border-radius: 2px;
+        text-transform: capitalize;
+      }
+      &--price{
+        text-align: right;
+        @media only screen and (max-width: 768px) {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+  & &-list{
+    width: auto;
+    margin: 0 -15px;
+    min-height: 760px;
+  }
+  & &-pagination{
+    padding-top: 20px;
+  }
+}

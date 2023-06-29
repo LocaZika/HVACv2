@@ -1,0 +1,63 @@
+.car-detail .car-detail__sidebar{
+  text-transform: capitalize;
+  padding: 25px 30px 20px;
+  background-color: #f7f7f7;
+  .primary-link{
+    display: block;
+    border-radius: 0;
+    padding: 12px 0 10px;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .sidebar-item{
+    background: #ffffff;
+    color: #727171;
+    border: 1px solid #ebebeb;
+  }
+  ul li{
+    font-size: 15px;
+    color: #727171;
+    line-height: 36px;
+    overflow: hidden;
+    span{
+      color: #353535;
+      font-weight: 700;
+      float: right;
+    }
+  }
+  &__model{
+    margin-bottom: 5px;
+    ul{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+    & a{
+      background: #db2d2e;
+    }
+    p{
+      color: #353535;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+  &__payment{
+    ul{
+      margin-bottom: 30px;
+      li span.price{
+        font-size: 20px;
+      }
+    }
+    a{
+      background-color: #db2d2e;
+      svg{
+        margin-right: 5px;
+      }
+    }
+  }
+}

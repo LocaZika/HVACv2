@@ -1,0 +1,27 @@
+.pagination{
+  display: flex;
+  gap: 6px;
+  li{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    &:first-child, &:last-child{
+      display: none;
+    }
+    span{
+      display: block;
+      line-height: 85px;
+      height: 100%;
+    }
+    button{
+      width: 100%;
+      line-height: 50px;
+      color: #727171;
+      border: 1px solid #ebebeb;
+      border-radius: 2px;
+      font-size: 18px;
+      font-weight: 700;
+      background-color: transparent;
+    }
+  }
+}

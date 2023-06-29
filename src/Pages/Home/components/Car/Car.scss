@@ -1,0 +1,24 @@
+.home .car{
+  padding-bottom: 120px;
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__filter{
+    button[role='tab']{
+      color: #8d8d8d;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 10px;
+      &.Mui-selected{
+        color: #323232;
+      }
+    }
+    div[role='tablist']{
+      justify-content: center;
+    }
+    .MuiTabs-indicator{
+      background-color: #db2d2e;
+      height: 3px;
+    }
+  }
+}
