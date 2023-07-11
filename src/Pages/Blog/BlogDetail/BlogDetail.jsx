@@ -4,6 +4,7 @@ import {useFetch} from "Services/Hooks";
 import { useParams } from "react-router-dom";
 import { isEmpty } from "lodash";
 import { Loader } from "Components";
+import { Box } from "@mui/material";
 
 export default function BlogDetail() {
   const [page, setPage] = useState({});
@@ -19,19 +20,19 @@ export default function BlogDetail() {
     return <Loader />;
   }else{
     const {backgroundHero} = page;
-    const {title, subTitle, image, postBy, postDate, content, comments} = blogData;
+    const {title, subTitle, imageDefault, postedBy, postDate, content, comments} = blogData;
     return (
-      <>
+      <Box component={'section'} className="blog-detail">
         <BlogHero
           bg={backgroundHero}
           title={title}
           subTitle={subTitle}
-          postedBy={postBy}
+          postedBy={postedBy}
           postDate={postDate}
           commentQuantity={comments.length}
         />
-        <BlogContent image={image} content={content} />
-      </>
+        <BlogContent image={imageDefault} content={content} />
+      </Box>
     )
   }
 }

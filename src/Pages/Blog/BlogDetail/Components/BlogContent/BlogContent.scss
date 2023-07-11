@@ -1,0 +1,36 @@
+.blog-detail .blog-detail__content{
+  &__image{
+    margin-bottom: 95px;
+    margin-top: -360px;
+    padding-top: 0;
+    overflow: hidden;
+    min-height: 453px;
+  }
+  &__text{
+    margin-bottom: 42px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  &__quote{
+    padding: 0 60px;
+    margin-bottom: 60px;
+    p{
+      font-size: 20px;
+      color: #353535;
+      font-weight: 700;
+      line-height: 35px;
+      position: relative;
+      padding-left: 34px;
+      margin: 0;
+      &::before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 94px;
+        width: 3px;
+        background: #db2d2e;
+      }
+    }
+  }
+}
