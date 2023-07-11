@@ -76,7 +76,6 @@ export default function BlogCard({viewMore, db, xs, md, lg}) {
   }
 }
 BlogCard.propTypes = {
-  limit: PropTypes.number,
   viewMore: PropTypes.bool,
   db: PropTypes.object,
   xs: PropTypes.number,

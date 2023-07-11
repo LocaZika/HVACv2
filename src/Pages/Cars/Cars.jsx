@@ -50,7 +50,6 @@ export default function Cars() {
   };
   useEffect(() => {
     api.get(extraOpt).then(({res, data}) => {
-      console.log(extraOpt.page);
       const totalCount = Math.ceil(res.headers.get('X-Total-Count') / extraOpt.limit)
       let params = {};
       if (extraOpt.order !== 'desc'){

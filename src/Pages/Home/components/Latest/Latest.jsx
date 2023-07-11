@@ -1,9 +1,10 @@
 import { Box, Container, Grid } from '@mui/material';
 import './Latest.scss';
 import { BlogCard } from 'Components';
+import propTypes from 'prop-types';
 
 
-export default function Latest({db}) {
+export default function Latest({db, blog}) {
   const {title, description} = db;
   return (
     <Box component={'section'} className={'lastest spad'}>
@@ -25,9 +26,15 @@ export default function Latest({db}) {
           </Grid>
         </Grid>
         <Grid container>
-          <BlogCard limit={3} />
+          {
+            blog.map(item => <BlogCard key={item.id} db={item} />)
+          }
         </Grid>
       </Container>
     </Box>
   )
+}
+Latest.propTypes = {
+  db: propTypes.object.isRequired,
+  blog: propTypes.array.isRequired,
 }

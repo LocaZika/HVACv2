@@ -6,14 +6,18 @@ import { useFetch } from 'Services/Hooks';
 import { Loader } from 'Components';
 
 export default function Home() {
-  const api = useFetch('homePage');
+  const api = useFetch();
   const [homePage, setHomePage] = useState({
     data: undefined,
     loading: true,
   });
+  const [latestBlog, setLatestBlog] = useState([]);
   useEffect(() => {
-    api.get().then(({data}) => {
+    api.get({path: 'homePage'}).then(({data}) => {
       setHomePage({data: data, loading: false});
+    });
+    api.get({path: 'blogs', limit: 3}).then(({data}) => {
+      setLatestBlog(data);
     });
   }, []);
   if (homePage.loading === true){
@@ -27,7 +31,7 @@ export default function Home() {
         <Feature db={features} />
         <Car db={car} />
         <ChooseUs db={chooseUs} />
-        <Latest db={blog} />
+        <Latest db={blog} blog={latestBlog} />
         <Cta db={cta} />
       </Grid>
     )

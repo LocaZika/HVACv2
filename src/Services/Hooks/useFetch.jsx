@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const host = import.meta.env.VITE_HOST; // process.env.tenbien
 const generateUrl = (obj) => {
-  let url = '?';
+  let url = '';
   const checkPrefix = (key, value) => {
     url.charAt(1) === '' ?
-      url += `_${key}=${value}` :
+      url += `?_${key}=${value}` :
       url += `&_${key}=${value}`;
   }
   if (isEmpty(obj) === true || obj === undefined){
@@ -26,7 +26,7 @@ const generateUrl = (obj) => {
   }
   if (obj.search ?? undefined){
     url.charAt(1) === '' ?
-      url += `q=${obj.search}` :
+      url += `?q=${obj.search}` :
       url += `&q=${obj.search}`;
   }
   if (obj.filter ?? undefined){
@@ -51,7 +51,7 @@ export default function useFetch(path) {
     let responsive = {};
     const defData = requestObject.data ?? null;
     const defExUrl = requestObject.extraUrl ?? '';
-    const defUrl = host + path + defExUrl;
+    const defUrl = host + requestObject.path + defExUrl;
     let initFetch = {
       method,
       'content-type': 'application/json',
@@ -67,7 +67,8 @@ export default function useFetch(path) {
   const get = (extraOpt) => {
     const defExOpt = extraOpt ?? {};
     const extraUrl = generateUrl(defExOpt);
-    return send('GET', {extraUrl});
+    const defPath = path ?? extraOpt.path;
+    return send('GET', {extraUrl, path: defPath});
   };
   const post = (data) => {
     return send('POST', {data});
