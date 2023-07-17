@@ -1,0 +1,27 @@
+.blog-detail__author{
+  overflow: hidden;
+  margin-bottom: 60px;
+  &__pic{
+    margin-right: 40px;
+    float: left;
+    img{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+  &__text{
+    overflow: hidden;
+    h5{
+      font-size: 20px;
+      color: #353535;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    p{
+      font-size: 17px;
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+  }
+}

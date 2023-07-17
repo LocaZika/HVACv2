@@ -86,7 +86,7 @@ export default function ProductCard({ product, xs, md, lg }) {
               <Box component={'span'} textTransform={'capitalize'}>{product.gearboxType}</Box>
             </Box>
             <Box component={'li'}>
-              <Box component={'span'}>{product.horsePower}</Box>
+              <Box component={'span'}>{product.hp}</Box>
               &nbsp;hp
             </Box>
           </Box>

@@ -1,7 +1,7 @@
 import { Box, Container, Grid } from '@mui/material';
 import './Latest.scss';
 import { BlogCard } from 'Components';
-
+import PropTypes from 'prop-types';
 
 export default function Latest({db}) {
   const {title, description} = db;
@@ -30,4 +30,7 @@ export default function Latest({db}) {
       </Container>
     </Box>
   )
+}
+Latest.propTypes = {
+  db: PropTypes.object.isRequired,
 }

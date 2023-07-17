@@ -1,0 +1,54 @@
+.blog-detail__comment{
+  margin-bottom: 60px;
+  &__item{
+    overflow: hidden;
+    margin-bottom: 30px;
+    &__pic{
+      float: left;
+      margin-right: 30px;
+      img{
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+      }
+    }
+    &__text{
+      overflow: hidden;
+      h6{
+        font-size: 15px;
+        color: #353535;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      p{
+        margin-bottom: 35px;
+      }
+      .blog-comment-btn{
+        font-size: 15px;
+        color: #353535;
+        font-weight: 700;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        padding: 6px 20px 4px;
+        margin-right: 6px;
+        transition: background-color 0.3s linear;
+        background-color: transparent;
+        &:hover{
+          background: #db2d2e;
+          color: #ffffff;
+        }
+      }
+      .blog-comment-counter{
+        margin-right: 6px;
+        font-size: 17px;
+        float: right;
+        line-height: 30px;
+      }
+    }
+    &.reply-comment{
+      padding-top: 30px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-left: 100px;
+    }
+  }
+}

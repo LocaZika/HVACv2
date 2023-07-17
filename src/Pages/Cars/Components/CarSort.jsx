@@ -1,5 +1,6 @@
 import { Grid, Box, Select, MenuItem } from '@mui/material';
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 export default function CarSort({setSort}) {
   const [limit, setlimit] = useState(9);
@@ -38,4 +39,7 @@ export default function CarSort({setSort}) {
       </Grid>
     </Grid>
   )
+}
+CarSort.propTypes = {
+  setSort: PropTypes.func.isRequired,
 }

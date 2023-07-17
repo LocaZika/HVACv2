@@ -12,7 +12,7 @@ export default function BlogHero({bg, title, subTitle, postedBy, postDate, comme
     >
       <Container fixed>
         <Grid justifyContent={'center'}>
-          <Grid item lg={10} >
+          <Grid item lg={12} >
             <Box className='blog-detail__hero__text'>
               <Box component='span' className="blog-detail__hero__text__sub-title">{subTitle}</Box>
               <Box component='h2' className="blog-detail__hero__text__title">{title}</Box>

@@ -1,0 +1,44 @@
+.blog-detail__share{
+  margin-right: -34px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  &__item{
+    display: inline-block;
+    border-radius: 2px;
+    padding: 11px 11px 9px 17px;
+    width: calc(25% - 34px);
+    margin-bottom: 20px;
+    border: 0;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    >svg{
+      color: #ffffff;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding-right: 15px;
+      display: inline-block;
+    }
+    >span{
+      font-size: 15px;
+      color: #ffffff;
+      font-weight: 600;
+      display: inline-block;
+      margin-left: 10px;
+      &::first-letter{
+        text-transform: capitalize;
+      }
+    }
+    &.fb{
+      background-color: #37589C;
+    }
+    &.twitter{
+      background-color: #54ADF0;
+    }
+    &.reddit{
+      background-color: #DC4C39;
+    }
+    &.linkedin{
+      background-color: #0179B6;
+    }
+  }
+}
