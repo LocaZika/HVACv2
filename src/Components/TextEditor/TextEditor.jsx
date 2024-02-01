@@ -15,8 +15,7 @@ import { Alignment } from "@ckeditor/ckeditor5-alignment";
 import { Image, ImageCaption, ImageInsert, ImageResize, ImageStyle, ImageToolbar, ImageUpload } from "@ckeditor/ckeditor5-image";
 import { BlockQuote } from "@ckeditor/ckeditor5-block-quote";
 import { Base64UploadAdapter } from "@ckeditor/ckeditor5-upload";
-import { Box, Button } from "@mui/material";
-import { Send } from "@mui/icons-material";
+import { Box } from "@mui/material";
 import propTypes from "prop-types";
 
 let editorConfig = {
@@ -38,7 +37,7 @@ let editorConfig = {
     'underline',
   ],
 }
-export default function TextEditor({insertMedia, blockquote, list, undo, alignment, insertTable, handleSubmit}) {
+export default function TextEditor({insertMedia, blockquote, list, undo, alignment, insertTable, callbackData}) {
   const [data, setData] = useState("");
   const defAlignment = alignment ?? false;
   const defBlockquote = blockquote ?? false;
@@ -102,11 +101,8 @@ export default function TextEditor({insertMedia, blockquote, list, undo, alignme
   const regexNewline = /\n/gm;
   const handleChangeEditor = (e, editor) => {
     setData(editor.getData());
-  }
-  const handleSend = (e) => {
-    e.preventDefault();
     const sendingData = data.replace(regexNewline, "\\n");
-    handleSubmit(sendingData);
+    callbackData(sendingData);
   }
   return (
     <Box className='text-editor'>
@@ -116,11 +112,6 @@ export default function TextEditor({insertMedia, blockquote, list, undo, alignme
         data={data}
         onChange={handleChangeEditor}
       />
-      <form onSubmit={handleSend}>
-        <Button type="submit">
-          <Send />
-        </Button>
-      </form>
     </Box>
   )
 }
@@ -131,5 +122,5 @@ TextEditor.propTypes = {
   undo: propTypes.bool,
   alignment: propTypes.bool,
   insertTable: propTypes.bool,
-  handleSubmit: propTypes.func.isRequired,
+  callbackData: propTypes.func.isRequired,
 }

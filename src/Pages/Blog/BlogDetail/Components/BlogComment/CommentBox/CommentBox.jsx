@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Box, Button } from '@mui/material';
 import PropTypes from 'prop-types';
-import Markdown from 'markdown-to-jsx';
 
 // Xu ly khi chua co backend
 const userComment = {
@@ -19,9 +18,7 @@ export default function CommentBox({comment, replyCount, isReply}) {
       </Box>
       <Box className='blog-detail__comment__item__text'>
         <Box component={'h6'}>{userComment.name}</Box>
-        <Markdown options={{forceBlock: true}}>
-          {content}
-        </Markdown>
+        <Box component='p'>{content}</Box>
         <Button className='blog-comment-btn'>like</Button>
         <Button className='blog-comment-btn'>reply</Button>
         <Box className='blog-comment-counter'>

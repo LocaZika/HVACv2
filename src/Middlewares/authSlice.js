@@ -17,4 +17,4 @@ export const authSlice = createSlice({
     },
   },
 });
-export const authSelector = (state) => state.auth;
+export const authState = (state) => state.auth;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./BlogDetail.scss";
 import {BlogHero, BlogContent, BlogShare, BlogAuthor, BlogComment, BlogCommentForm} from "./Components";
 import {useFetch} from "Services/Hooks";
 import { useParams } from "react-router-dom";
@@ -39,7 +40,7 @@ export default function BlogDetail() {
       return newWordArr.join(" ") + "...";
     }
     return (
-      <Box component={'section'} className="blog-detail">
+      <Box component={'section'} className="blog-detail spad">
         <BlogHero
           bg={backgroundHero}
           title={title}
@@ -62,7 +63,7 @@ export default function BlogDetail() {
               <BlogShare title={title} preview={previewBlog(content)} />
               <BlogAuthor author={author} />
               <BlogComment comment={comments} />
-              <BlogCommentForm />
+              <BlogCommentForm db={page.commentForm} />
             </Grid>
           </Grid>
         </Container>

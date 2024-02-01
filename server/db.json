@@ -4836,6 +4836,13 @@
     }
   },
   "blogDetailPage": {
-    "backgroundHero": "https://preview.colorlib.com/theme/hvac/img/blog/details/details-hero-bg.jpg"
+    "backgroundHero": "https://preview.colorlib.com/theme/hvac/img/blog/details/details-hero-bg.jpg",
+    "commentForm": {
+      "title": "leave a reply",
+      "nameText": "name",
+      "emailText": "email",
+      "commentText": "comment",
+      "buttonText": "submit now"
+    }
   }
 }

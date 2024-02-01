@@ -1,0 +1,45 @@
+.blog-detail__comment-form{
+  width: 100%;
+  h4{
+    color: #353535;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  &__login{
+    text-transform: none;
+    &::first-letter{
+      text-transform: capitalize;
+    }
+    >a{
+      color: #db2d2e;
+    }
+  }
+  &__comment{
+    margin-bottom: 24px;
+    p {
+      color: #353535;
+      margin-bottom: 5px;
+    }
+    textarea{
+      resize: none;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+  }
+  button{
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 700;
+    display: inline-block;
+    padding: 15px 35px 12px 38px;
+    background: #db2d2e;
+    border: none;
+    border-radius: 2px;
+    line-height: normal;
+    text-transform: capitalize;
+    &:hover{
+      background-color: #db2d2e;
+    }
+  }
+}
